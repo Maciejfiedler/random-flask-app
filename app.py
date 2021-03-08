@@ -28,4 +28,4 @@ def home():
 
 
 from waitress import serve
-serve(app, listen='*:8080')
+serve(app, listen='*:80')
