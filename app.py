@@ -18,6 +18,6 @@ def inctxt():
 @app.route('/')
 def home():
     inctxt()
-    return f'This website got requested: {readfromtxt()}'
+    return flask.render_template('index.html', requests=readfromtxt())
 
 
