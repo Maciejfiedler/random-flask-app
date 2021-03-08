@@ -9,17 +9,12 @@ def readfromtxt():
 
 def inctxt():
     with open("requests.txt", "r+") as f:
-        try:
-            count = int(f.read())
-            count+=1
-            newcount = count
-            f.seek(0)
-            f.truncate()
-            f.write(str(newcount))
-        except:
-            f.seek(0)
-            f.truncate()
-            f.write("SOMETHING WENT WRONG, PLEASE CONTACT THE AUTHOR OF THIS PAGE")
+        count = int(f.read())
+        count+=1
+        newcount = count
+        f.seek(0)
+        f.truncate()
+        f.write(str(newcount))
 
 @app.route('/')
 def home():
